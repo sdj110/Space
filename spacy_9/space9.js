@@ -1,7 +1,4 @@
 
-
-import { Star } from "./star.js";
-
 // get main canvas/context
 var Context = 
 {
@@ -34,14 +31,46 @@ var Context =
 
 
 
-class Vector2
+
+
+
+
+
+
+//
+//
+//
+//Star Class
+class Star
 {
-	constructor(x, y)
+	// Star constructor
+	constructor(x, y, r, f = "#FFFFFF")
 	{
+		// Set up star coords/dimensions/color
 		this.x = x;
 		this.y = y;
+		this.width = r;
+		this.height = r;
+		this.fill = f;
 	}
+// END OF STAR CLASS
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2233,7 +2262,3 @@ function main()
 
 // call main
 main();
-
-
-
-
