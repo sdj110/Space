@@ -30,7 +30,21 @@ var Context =
 
 
 
+class Vector2
+{
+	constructor(x, y)
+	{
+		this.x = x;
+		this.y = y;
+	}
 
+	setPosition(x, y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+
+}
 
 
 
@@ -47,8 +61,7 @@ class Star
 	constructor(x, y, r, f = "#FFFFFF")
 	{
 		// Set up star coords/dimensions/color
-		this.x = x;
-		this.y = y;
+		this.pos = new Vector2(x, y);
 		this.width = r;
 		this.height = r;
 		this.fill = f;
@@ -1902,7 +1915,7 @@ class MainGame
 		for (var i = 0; i < self.starList.length; i++) 
 		{
 			Context.context.fillStyle = self.starList[i].fill;
-			Context.context.fillRect(self.starList[i].x, self.starList[i].y, self.starList[i].width, self.starList[i].height);	
+			Context.context.fillRect(self.starList[i].pos.x, self.starList[i].pos.y, self.starList[i].width, self.starList[i].height);	
 		}	
 	}
 	
